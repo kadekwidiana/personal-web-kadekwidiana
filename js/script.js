@@ -50,7 +50,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Student', 'Web Develover', 'Mobile Develover'],
+    strings: ['Student', 'Programmer', 'Designer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 100,
@@ -82,3 +82,22 @@ if (savedDarkMode === 'true') {
     // Change icon to sun
     toggleModeButton.innerHTML = '<i class="bx bx-sun"></i>';
 }
+
+/*==================== ACCORDION SKILLS ====================*/
+const skillsContent = document.getElementsByClassName("skills__content"),
+    skillsHeader = document.querySelectorAll(".skills__header")
+
+function toggleSkills() {
+    let itemClass = this.parentNode.className
+
+    for (i = 0; i < skillsContent.length; i++) {
+        skillsContent[i].className = "skills__content skills__close"
+    }
+    if (itemClass === "skills__content skills__close") {
+        this.parentNode.className = "skills__content skills__open"
+    }
+}
+
+skillsHeader.forEach((el) => {
+    el.addEventListener("click", toggleSkills)
+})
