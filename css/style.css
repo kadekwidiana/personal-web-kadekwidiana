@@ -359,6 +359,18 @@ span {
     width: 70%;
 }
 
+.skills__word {
+    width: 75%;
+}
+
+.skills__excel {
+    width: 60%;
+}
+
+.skills__ppt {
+    width: 70%;
+}
+
 .skills__close .skills__list {
     height: 0;
     overflow: hidden;
@@ -374,6 +386,43 @@ span {
 }
 
 /*==================== QUALIFICATION ====================*/
+.qualification__tabs {
+    /* background: red; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.qualification__active {
+    display: block;
+    color: var(--main-color);
+}
+
+.qualification__nonactive {
+    display: none;
+}
+
+.qualification__button:hover {
+    color: var(--main-color);
+}
+
+.qualification__button {
+    font-size: 1.6rem;
+}
+
+.qualification__button i {
+    font-size: 2.2rem;
+}
+
+.qualification__icon {
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+
 .qualification__container {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -486,6 +535,11 @@ span {
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+}
+
+.portfolio-container .portfolio-box:last-child {
+    grid-column: 2;
+    /* Place the last portfolio-box in the middle column */
 }
 
 .portfolio-box img {
@@ -782,6 +836,18 @@ span {
         font-size: 50%;
     }
 
+    .home-img img {
+        width: 90vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-img img {
+        width: 100vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .about-info {
         display: flex;
         justify-content: space-between;
@@ -802,6 +868,11 @@ span {
         font-size: 1.5rem;
     }
 
+    .skills__container {
+        row-gap: 100;
+        margin: 0 1rem;
+    }
+
     .qualification__data {
         width: 80%;
     }
@@ -818,10 +889,14 @@ span {
 @media (max-width: 365px) {
     .home-img img {
         width: 90vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .about-img img {
-        width: 90vw;
+        width: 100vw;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .about-info {
@@ -842,6 +917,11 @@ span {
 
     .about-info-name {
         font-size: 1.5rem;
+    }
+
+    .skills__container {
+        row-gap: 100;
+        margin: 0 1rem;
     }
 
     .qualification__data {

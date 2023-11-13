@@ -100,4 +100,41 @@ function toggleSkills() {
 
 skillsHeader.forEach((el) => {
     el.addEventListener("click", toggleSkills)
-})
+});
+
+/*==================== PERSONAL JOURNEY ====================*/
+function showContent(contentId, activeBtnId, inactiveBtnId) {
+    // Mengambil semua elemen dengan class qualification__content
+    var contentElements = document.querySelectorAll('.qualification__content');
+    var btnActive = document.getElementById(activeBtnId);
+    var btnInactive = document.getElementById(inactiveBtnId);
+
+    // Menggunakan forEach untuk menyembunyikan semua elemen konten
+    contentElements.forEach(function (contentElement) {
+        contentElement.style.display = 'none';
+    });
+
+    // Menampilkan elemen konten yang sesuai dengan contentId
+    var selectedContent = document.getElementById(contentId);
+    if (selectedContent) {
+        selectedContent.style.display = 'block';
+    }
+
+    // Menambah kelas qualification__active pada tombol aktif
+    if (btnActive) {
+        btnActive.classList.add('qualification__active');
+    }
+
+    // Menghapus kelas qualification__active pada tombol tidak aktif
+    if (btnInactive) {
+        btnInactive.classList.remove('qualification__active');
+    }
+}
+
+// data json
+fetch('js/data-port.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data[0].image);
+    })
+    .catch(error => console.error('Error fetching portfolio data:', error));
