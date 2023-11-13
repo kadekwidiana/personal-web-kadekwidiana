@@ -132,9 +132,43 @@ function showContent(contentId, activeBtnId, inactiveBtnId) {
 }
 
 // data json
+// Get the container element
+const portfolioContainer = document.getElementById("portfolio-container");
+// Get the loading and failed elements
+const loadingElement = document.querySelector(".loading");
+const failedElement = document.querySelector(".failed");
 fetch('js/data-port.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data[0].image);
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
     })
-    .catch(error => console.error('Error fetching portfolio data:', error));
+    .then(data => {
+        // console.log(data[0].image);
+
+        // Hapus loading element dan tampilkan data
+        loadingElement.style.display = 'none';
+
+        data.forEach(portfolio => {
+            // console.log(portfolio.title)
+
+            // Menambahkan konten untuk setiap portofolio
+            var content = `
+                <div class="portfolio-box">
+                    <img src="${portfolio.image}" alt="${portfolio.title}">
+                    <div class="portfolio-layer">
+                        <h4>${portfolio.title}</h4>
+                        <p>${portfolio.description}</p>
+                        <a href="${portfolio.link}"><i class="bx bx-link-external"></i></a>
+                    </div>
+                </div>`;
+
+            portfolioContainer.innerHTML += content;
+        })
+    })
+    .catch(error => {
+        loadingElement.style.display = 'block';
+
+        console.error('Error fetching portfolio data:', error);
+    });

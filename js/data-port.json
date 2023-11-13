@@ -1,13 +1,50 @@
 [
     {
+        "id": 1,
         "image": "assets/portfolio/web-wefgis.png",
-        "title": "Web Design",
+        "title": "Web Design1",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
         "link": "#"
     },
     {
-        "image": "assets/portfolio/web-wefgis.png",
-        "title": "Web Design",
+        "id": 2,
+        "image": "assets/portfolio/crops_apps.png",
+        "title": "Web Design2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "image": "assets/portfolio/app_wisata.png",
+        "title": "Web Design3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "link": "#"
+    },
+    {
+        "id": 4,
+        "image": "assets/portfolio/web_rental-motor.png",
+        "title": "Web Design3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "link": "#"
+    },
+    {
+        "id": 5,
+        "image": "assets/portfolio/web-design-silangjana.png",
+        "title": "Web Design3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "link": "#"
+    },
+    {
+        "id": 6,
+        "image": "assets/portfolio/design-web_part-time.png",
+        "title": "Web Design3",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "link": "#"
+    },
+    {
+        "id": 7,
+        "image": "assets/portfolio/web-wordpress.png",
+        "title": "Web Design3",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
         "link": "#"
     }
