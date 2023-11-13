@@ -2,50 +2,50 @@
     {
         "id": 1,
         "image": "assets/portfolio/web-wefgis.png",
-        "title": "Web Design1",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "WebGIS",
+        "description": "Website-based Geographic Information system for mapping with geospatial technology, created using Laravel, LeafletJS, and integration with GEE & Geoserver",
         "link": "#"
     },
     {
         "id": 2,
         "image": "assets/portfolio/crops_apps.png",
-        "title": "Web Design2",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "Crops Apps",
+        "description": "Crops Application data management with the integration of Machine Learning technology and Google Maps, created using Flutter",
         "link": "#"
     },
     {
         "id": 3,
         "image": "assets/portfolio/app_wisata.png",
-        "title": "Web Design3",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "Wisata Apps",
+        "description": "Location-based tourist attraction application, created using Flutter",
         "link": "#"
     },
     {
         "id": 4,
         "image": "assets/portfolio/web_rental-motor.png",
-        "title": "Web Design3",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "Web Rental Motor",
+        "description": "Motorbike rental management system with efficient features in managing motorbike rentals and providing information media related to motorbike rentals, created using the framework Laravel and Bootstraps",
         "link": "#"
     },
     {
         "id": 5,
         "image": "assets/portfolio/web-design-silangjana.png",
-        "title": "Web Design3",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "Web Silangjana Village",
+        "description": "Website Landing Page for information media in Silangjana village, created using HTML, CSS and JS",
         "link": "#"
     },
     {
         "id": 6,
         "image": "assets/portfolio/design-web_part-time.png",
-        "title": "Web Design3",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "Design Web Part Time",
+        "description": "Website UI design for looking for part-time work, created using Figma",
         "link": "#"
     },
     {
         "id": 7,
         "image": "assets/portfolio/web-wordpress.png",
-        "title": "Web Design3",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, necessitatibus!",
+        "title": "Web Muncan Village",
+        "description": "The Muncan village website as a medium for information related to Muncan village, was created using WordPress",
         "link": "#"
     }
 ]
