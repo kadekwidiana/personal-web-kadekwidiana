@@ -1,0 +1,83 @@
+CONTENT PORTFOLIO WITH DISPLAY MODAL POPUP
+            <!-- <div>
+                <div class="portfolio-box">
+                    <img src="assets/portfolio/crops_apps.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Crops Apps</h4>
+                        <p>Crops Application data management with the integration of Machine Learning technology and
+                            Google
+                            Maps, created using Flutter</p>
+                        <a class="button button__flex button--small button--link services__button"
+                            data-modal-id="modal1"><i class="bx bx-link-external"></i></a>
+                        <span class="button button__flex button--small button--link services__button"
+                            data-modal-id="modal1">View More</span>
+                    </div>
+                </div>
+                <div id="modal1" class="services__modal">
+                    <div class="services__modal-content">
+                        <h4 class="services__modal-title">Ui / Ux <br> Designer</h4>
+                        <i class="bx bx-x services__modal-close"></i>
+
+                        <ul class="services__modal-services grid">
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Company profile landing page</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>User interface Design website Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
+                                    Exercitationem nihil atque ullam expedita sed beatae praesentium minima voluptatem
+                                    debitis labore!</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Apps Ui / Ux design</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="portfolio-box">
+                    <img src="assets/portfolio/crops_apps.png" alt="">
+                    <div class="portfolio-layer">
+                        <h4>Crops tess</h4>
+                        <p>Crops Application data management with the integration of Machine Learning technology and
+                            Google
+                            Maps, created using Flutter</p>
+                        <a class="button button__flex button--small button--link services__button"
+                            data-modal-id="modal2"><i class="bx bx-link-external"></i></a>
+                        <span class="button button__flex button--small button--link services__button"
+                            data-modal-id="modal2">View More</span>
+                        </span>
+
+                    </div>
+                </div>
+                <div id="modal2" class="services__modal">
+                    <div class="services__modal-content">
+                        <h4 class="services__modal-title">TESSSS <br> Designer</h4>
+                        <i class="bx bx-x services__modal-close"></i>
+
+                        <ul class="services__modal-services grid">
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Company profile landing page</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>User interface Design website Lorem ipsum dolor sit, amet consectetur adipisicing
+                                    elit.
+                                    Exercitationem nihil atque ullam expedita sed beatae praesentium minima voluptatem
+                                    debitis labore!</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Apps Ui / Ux design</p>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div> -->

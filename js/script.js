@@ -131,44 +131,102 @@ function showContent(contentId, activeBtnId, inactiveBtnId) {
     }
 }
 
+
+/*==================== SERVICES MODAL ====================*/
+const modalBtns = document.querySelectorAll(".services__button");
+const modalCloses = document.querySelectorAll(".services__modal-close");
+
+let modal = function (modalId) {
+    const modalView = document.getElementById(modalId);
+    if (modalView) {
+        modalView.classList.add("active-modal");
+    }
+};
+
+modalBtns.forEach((modalBtn) => {
+    modalBtn.addEventListener("click", () => {
+        const modalId = modalBtn.getAttribute("data-modal-id");
+        modal(modalId);
+    });
+});
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener("click", () => {
+        const modalId = modalClose.closest(".services__modal").id;
+        const modalView = document.getElementById(modalId);
+        if (modalView) {
+            modalView.classList.remove("active-modal");
+        }
+    });
+});
+
 // data json
 // Get the container element
-// const portfolioContainer = document.getElementById("portfolio-container");
-// // Get the loading and failed elements
-// const loadingElement = document.querySelector(".loading");
-// const failedElement = document.querySelector(".failed");
-// fetch('js/data-port.json')
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! Status: ${response.status}`);
-//         }
-//         return response.json();
-//     })
-//     .then(data => {
-//         // console.log(data[0].image);
+const portfolioContainer = document.getElementById("portfolio-container");
+const loadingElement = document.querySelector(".loading");
+const failedElement = document.querySelector(".failed");
 
-//         // Hapus loading element dan tampilkan data
-//         loadingElement.style.display = 'none';
+fetch('js/data-port.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        loadingElement.style.display = 'none';
 
-//         data.forEach(portfolio => {
-//             // console.log(portfolio.title)
+        data.forEach(portfolio => {
+            var content = `
+                <div class="portfolio-box">
+                    <img src="${portfolio.image}" alt="${portfolio.title}">
+                    <div class="portfolio-layer">
+                        <h4>${portfolio.title}</h4>
+                        <p>${portfolio.description}</p>
+                        <div class="portfolio-target">   
+                            <a class="portfolio-link"><i class='bx bx-info-circle'></i></a>
+                            <a href="${portfolio.linkGithub}" class="portfolio-link-github"><i class='bx bxl-github'></i></i></a>
+                            <a href="${portfolio.linkWeb}" class="portfolio-link-web"><i class="bx bx-link-external"></i></a>
+                        </div>
+                    </div>
+                </div>`;
 
-//             // Menambahkan konten untuk setiap portofolio
-//             var content = `
-//                 <div class="portfolio-box">
-//                     <img src="${portfolio.image}" alt="${portfolio.title}">
-//                     <div class="portfolio-layer">
-//                         <h4>${portfolio.title}</h4>
-//                         <p>${portfolio.description}</p>
-//                         <a href="${portfolio.link}"><i class="bx bx-link-external"></i></a>
-//                     </div>
-//                 </div>`;
+            // const portLinkGithub = document.querySelector('.portfolio-link-github');
+            // const portLinkWeb = document.querySelector('.portfolio-link-web');
 
-//             portfolioContainer.innerHTML += content;
-//         })
-//     })
-//     .catch(error => {
-//         loadingElement.style.display = 'block';
+            // if (portfolio.linkGithub == '') {
+            //     portLinkWeb.style.display = 'none';
+            // }
+            // if (portfolio.linkWeb == '') {
+            //     portLinkGithub.style.display = 'none';
+            // }
 
-//         console.error('Error fetching portfolio data:', error);
-//     });
+            portfolioContainer.innerHTML += content;
+        });
+
+        // Add event listener to each portfolio link
+        const portfolioLinks = document.querySelectorAll(".portfolio-link");
+        portfolioLinks.forEach((link, index) => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                alert(`Detail : ${data[index].title} on process`);
+            });
+        });
+    })
+    .catch(error => {
+        loadingElement.style.display = 'block';
+        console.error('Error fetching portfolio data:', error);
+    });
+
+// SERVICES READ MORE
+function toggleText(service) {
+    var textContainer = document.getElementById(service).getElementsByClassName('text-container')[0];
+    var shortText = textContainer.querySelector('.short-text');
+    var fullText = textContainer.querySelector('.full-text');
+
+    if (shortText && fullText) {
+        shortText.style.display = shortText.style.display === 'none' ? 'block' : 'none';
+        fullText.style.display = fullText.style.display === 'none' ? 'block' : 'none';
+        document.querySelector(`#${service} .read-more`).textContent = shortText.style.display === 'none' ? 'Show Less' : 'Read More';
+    }
+}
