@@ -209,7 +209,7 @@ fetch('js/data-port.json')
         portfolioLinks.forEach((link, index) => {
             link.addEventListener("click", function (event) {
                 event.preventDefault();
-                alert(`Detail : ${data[index].title} on process`);
+                alert(`Detail ${data[index].title} on process`);
             });
         });
     })
