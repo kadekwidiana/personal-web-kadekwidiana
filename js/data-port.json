@@ -1,6 +1,14 @@
 [
     {
         "id": 1,
+        "image": "assets/portfolio/game-web.png",
+        "title": "Game Flatformer Web",
+        "description": "Platformer web game with interesting levels and obstacles, can be played directly via the web without the need to download",
+        "linkGithub": "https://github.com/kadekwidiana/game-flatformer-web.git",
+        "linkWeb": "https://kadekwidiana.github.io/game-flatformer-web/"
+    },
+    {
+        "id": 2,
         "image": "assets/portfolio/web-wefgis.png",
         "title": "WebGIS",
         "description": "Website-based Geographic Information system for mapping with geospatial technology, created using Laravel, LeafletJS, and integration with GEE & Geoserver",
@@ -8,7 +16,7 @@
         "linkWeb": "https://wefgis.com"
     },
     {
-        "id": 2,
+        "id": 3,
         "image": "assets/portfolio/crops_apps.png",
         "title": "Crops Apps",
         "description": "Crops Application data management with the integration of Machine Learning technology and Google Maps, created using Flutter",
@@ -16,7 +24,7 @@
         "linkWeb": "#"
     },
     {
-        "id": 3,
+        "id": 4,
         "image": "assets/portfolio/app_wisata.png",
         "title": "Wisata Apps",
         "description": "Location-based tourist attraction application, created using Flutter",
@@ -24,7 +32,7 @@
         "linkWeb": "#"
     },
     {
-        "id": 4,
+        "id": 5,
         "image": "assets/portfolio/web_rental-motor.png",
         "title": "Web Rental Motor",
         "description": "Motorbike rental management system with efficient features in managing motorbike rentals and providing information media related to motorbike rentals, created using the framework Laravel and Bootstraps",
@@ -32,7 +40,7 @@
         "linkWeb": "https://damarmotorbike.com"
     },
     {
-        "id": 5,
+        "id": 6,
         "image": "assets/portfolio/web-design-silangjana.png",
         "title": "Web Silangjana Village",
         "description": "Website Landing Page for information media in Silangjana village, created using HTML, CSS and JS",
@@ -40,7 +48,7 @@
         "linkWeb": "https://silangjana-village.netlify.app"
     },
     {
-        "id": 6,
+        "id": 7,
         "image": "assets/portfolio/design-web_part-time.png",
         "title": "Design Web Part Time",
         "description": "Website UI design for looking for part-time work, created using Figma",
@@ -48,7 +56,7 @@
         "linkWeb": "https://www.figma.com/proto/GOu3bveocIRXXGRIfkN3zM/DESIGN_PARTIME?node-id=31-75&starting-point-node-id=31%3A75&scaling=contain"
     },
     {
-        "id": 7,
+        "id": 8,
         "image": "assets/portfolio/web-wordpress.png",
         "title": "Web Muncan Village",
         "description": "The Muncan village website as a medium for information related to Muncan village, was created using WordPress",
