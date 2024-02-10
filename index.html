@@ -24,7 +24,7 @@
         content="Mahasiswa Teknik Informatika Universitas Pendidikan Ganesha, mempunyai minat pada Pemrograman dan Desain" />
     <meta property="og:url" content="https://kadekwidiana.site" />
     <meta name="keywords"
-        content="Kadek, Widiana, Kadek Widiana, TRPL, Undiksha, Deknos, Banjar Manik, Muncan, Selat, Karangasem, Web Developer, Mobile Developer, Programmer" />
+        content="Kadek, Widiana, Widi, Kadek Widiana, TRPL, Undiksha, Deknos, Banjar Manik, Muncan, Selat, Karangasem, Web Developer, Mobile Developer, Programmer" />
     <meta name="author" content="Kadek Widiana" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://kadekwidiana.site" />
@@ -34,6 +34,9 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer>
+    </script>
 </head>
 
 <body>
@@ -72,7 +75,9 @@
                 <a href="https://www.tiktok.com/@kdk010" target="_blank"><i class='bx bxl-tiktok'></i></a>
                 <a href="https://www.youtube.com/@kadekwidiana10" target="_blank"><i class='bx bxl-youtube'></i></a>
             </div>
+            <!-- Histats.com  (div with counter) -->
             <a href="#contact" class="btn">Contact Me <i class='bx bx-send'></i></a>
+            <div id="histats_counter" style="margin-top: 10px;"></div>
         </div>
 
         <div class="home-img">
@@ -649,9 +654,15 @@
                         <input type="number" placeholder="Mobile number">
                         <input type="text" placeholder="Email Subject">
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <textarea name="" id="" cols="20" rows="5" placeholder="Your Message"></textarea>
+                    <div class="input-box">
+                        <div class="g-recaptcha" data-sitekey="6LdZyW0pAAAAAMsK07rZU2ldipiRpkgmZacKjbs0"
+                            data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry"
+                            data-error-callback="onRecaptchaError">
+                        </div>
+                    </div>
                     <div class="submit-btn">
-                        <input type="submit" value="Send Message" class="btn">
+                        <button id="buttonSend" type="submit" class="btn-not-validate">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -678,6 +689,9 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+    <!-- Histats.com -->
+    <noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4843723&101" alt=""
+                border="0"></a></noscript>
 </body>
 
 </html>

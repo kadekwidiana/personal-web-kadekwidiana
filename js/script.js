@@ -1,4 +1,4 @@
-/*==================== toggle icon navbar ====================*/
+/*==================== TOGGLE ICON NAVBAR ====================*/
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -7,7 +7,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-/*==================== scroll sections active link ====================*/
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -35,7 +35,7 @@ window.onscroll = () => {
 }
 
 
-/*==================== scroll reveal ====================*/
+/*==================== SCROLL REVERAL ====================*/
 ScrollReveal({
     // reset: true,
     distance: '80px',
@@ -48,7 +48,7 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-/*==================== typed js ====================*/
+/*==================== TYPED JS ====================*/
 const typed = new Typed('.multiple-text', {
     strings: ['Student', 'Programmer', 'Designer'],
     typeSpeed: 100,
@@ -57,7 +57,7 @@ const typed = new Typed('.multiple-text', {
     loop: true
 })
 
-// Dark mode
+/*==================== DARK MODE ====================*/
 const toggleModeButton = document.getElementById('toggle-mode');
 const body = document.body;
 
@@ -102,7 +102,7 @@ skillsHeader.forEach((el) => {
     el.addEventListener("click", toggleSkills)
 });
 
-/*==================== PERSONAL JOURNEY ====================*/
+/*==================== TAB PERSONAL JOURNEY ====================*/
 function showContent(contentId, activeBtnId, inactiveBtnId) {
     // Mengambil semua elemen dengan class qualification__content
     var contentElements = document.querySelectorAll('.qualification__content');
@@ -160,8 +160,7 @@ modalCloses.forEach((modalClose) => {
     });
 });
 
-// data json
-// Get the container element
+/*==================== DATA PORTOFOLIO FROM DATA JSON ====================*/
 const portfolioContainer = document.getElementById("portfolio-container");
 const loadingElement = document.querySelector(".loading");
 const failedElement = document.querySelector(".failed");
@@ -218,7 +217,7 @@ fetch('js/data-port.json')
         console.error('Error fetching portfolio data:', error);
     });
 
-// SERVICES READ MORE
+/*==================== SERVICES READ MORE ====================*/
 function toggleText(service) {
     var textContainer = document.getElementById(service).getElementsByClassName('text-container')[0];
     var shortText = textContainer.querySelector('.short-text');
@@ -230,3 +229,42 @@ function toggleText(service) {
         document.querySelector(`#${service} .read-more`).textContent = shortText.style.display === 'none' ? 'Show Less' : 'Read More';
     }
 }
+
+// RECAPTCHA
+/*==================== RECAPTCHA ====================*/
+var buttonSend = document.getElementById("buttonSend")
+function disableButton() {
+    buttonSend.setAttribute("disabled", "disabled");
+    buttonSend.classList.add('btn-not-validate');
+    buttonSend.classList.remove('btn');
+}
+
+function enableButton() {
+    buttonSend.removeAttribute("disabled");
+    buttonSend.classList.remove('btn-not-validate');
+    buttonSend.classList.add('btn');
+}
+
+function onRecaptchaSuccess() {
+    enableButton();
+}
+
+function onRecaptchaResponseExpiry() {
+    disableButton();
+}
+
+function onRecaptchaError() {
+    disableButton();
+}
+
+/*==================== HISTATS ANALITIC ====================*/
+// <!-- Histats.com   (aync)-->
+var _Hasync = _Hasync || [];
+_Hasync.push(['Histats.start', '1,4843723,4,107,170,20,00001010']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function () {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('//s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})()
