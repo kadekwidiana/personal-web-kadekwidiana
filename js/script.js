@@ -160,63 +160,6 @@ modalCloses.forEach((modalClose) => {
     });
 });
 
-/*==================== DATA PORTOFOLIO FROM DATA JSON ====================*/
-const portfolioContainer = document.getElementById("portfolio-container");
-const loadingElement = document.querySelector(".loading");
-const failedElement = document.querySelector(".failed");
-
-fetch('js/data-port.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        loadingElement.style.display = 'none';
-
-        data.forEach(portfolio => {
-            var content = `
-                <div class="portfolio-box">
-                    <img src="${portfolio.image}" alt="${portfolio.title}">
-                    <div class="portfolio-layer">
-                        <h4>${portfolio.title}</h4>
-                        <p>${portfolio.description}</p>
-                        <div class="portfolio-target">   
-                            <a class="portfolio-link"><i class='bx bx-info-circle'></i></a>
-                            <a href="${portfolio.linkGithub}" class="portfolio-link-github"><i class='bx bxl-github'></i></i></a>
-                            <a href="${portfolio.linkWeb}" class="portfolio-link-web"><i class="bx bx-link-external"></i></a>
-                        </div>
-                    </div>
-                </div>`;
-
-            // const portLinkGithub = document.querySelector('.portfolio-link-github');
-            // const portLinkWeb = document.querySelector('.portfolio-link-web');
-
-            // if (portfolio.linkGithub == '') {
-            //     portLinkWeb.style.display = 'none';
-            // }
-            // if (portfolio.linkWeb == '') {
-            //     portLinkGithub.style.display = 'none';
-            // }
-
-            portfolioContainer.innerHTML += content;
-        });
-
-        // Add event listener to each portfolio link
-        const portfolioLinks = document.querySelectorAll(".portfolio-link");
-        portfolioLinks.forEach((link, index) => {
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-                alert(`Detail ${data[index].title} on process`);
-            });
-        });
-    })
-    .catch(error => {
-        loadingElement.style.display = 'block';
-        console.error('Error fetching portfolio data:', error);
-    });
-
 /*==================== SERVICES READ MORE ====================*/
 function toggleText(service) {
     var textContainer = document.getElementById(service).getElementsByClassName('text-container')[0];
@@ -267,4 +210,47 @@ _Hasync.push(['Histats.track_hits', '']);
     var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
     hs.src = ('//s10.histats.com/js15_as.js');
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})()
+})();
+
+/*==================== MODAL POPUP PORTOFOLIO ====================*/
+const openEls = document.querySelectorAll("[data-open]");
+const closeEls = document.querySelectorAll("[data-close]");
+const isVisible = "is-visible";
+
+for (const el of openEls) {
+    el.addEventListener("click", function () {
+        const modalId = this.dataset.open;
+        const modal = document.getElementById(modalId);
+        modal.classList.add(isVisible);
+        // Tambahkan class pada html untuk menghilangkan scroll
+        document.documentElement.classList.add("modal-open");
+    });
+}
+
+for (const el of closeEls) {
+    el.addEventListener("click", function () {
+        const modal = this.parentElement.parentElement.parentElement;
+        modal.classList.remove(isVisible);
+        // Hapus class pada html untuk mengembalikan scroll
+        document.documentElement.classList.remove("modal-open");
+    });
+}
+
+document.addEventListener("click", e => {
+    if (e.target == document.querySelector(".modal.is-visible")) {
+        const modal = document.querySelector(".modal.is-visible");
+        modal.classList.remove(isVisible);
+        // Hapus class pada html untuk mengembalikan scroll
+        document.documentElement.classList.remove("modal-open");
+    }
+});
+
+document.addEventListener("keyup", e => {
+    // if we press the ESC
+    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
+        const modal = document.querySelector(".modal.is-visible");
+        modal.classList.remove(isVisible);
+        // Hapus class pada html untuk mengembalikan scroll
+        document.documentElement.classList.remove("modal-open");
+    }
+});
