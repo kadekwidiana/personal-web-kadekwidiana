@@ -1,3 +1,60 @@
+/*==================== MULTI LANGUAGE ====================*/
+// Function to fetch language data
+async function fetchLanguageData(lang) {
+    const response = await fetch(`languages/${lang}.json`);
+    return response.json();
+}
+
+// Function to set the language preference
+function setLanguagePreference(lang) {
+    localStorage.setItem('language', lang);
+    location.reload();
+}
+
+// Function to update content based on selected language
+function updateContent(langData) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = langData[key];
+    });
+}
+
+// Function to change language
+async function changeLanguage(lang) {
+    await setLanguagePreference(lang);
+
+    const langData = await fetchLanguageData(lang);
+    updateContent(langData);
+}
+
+// Call updateContent() on page load
+window.addEventListener('DOMContentLoaded', async () => {
+    const userPreferredLanguage = localStorage.getItem('language') || 'en';
+    const langData = await fetchLanguageData(userPreferredLanguage);
+    updateContent(langData);
+    const flagImg = document.querySelector('.dropbtn img');
+    const multipleTextEn = document.getElementById('multiple-text-en');
+    const multipleTextId = document.getElementById('multiple-text-id');
+    const formInputEn = document.getElementById('form_input_contact_en');
+    const formInputId = document.getElementById('form_input_contact_id');
+
+    if (userPreferredLanguage === 'en') {
+        flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png';
+        flagImg.alt = 'English Flag';
+        multipleTextEn.style.display = 'block';
+        multipleTextId.style.display = 'none';
+        formInputEn.style.display = 'block';
+        formInputId.style.display = 'none';
+    } else if (userPreferredLanguage === 'id') {
+        flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png';
+        flagImg.alt = 'Indonesian Flag';
+        multipleTextEn.style.display = 'none';
+        multipleTextId.style.display = 'block';
+        formInputEn.style.display = 'none';
+        formInputId.style.display = 'block';
+    }
+});
+
 /*==================== TOGGLE ICON NAVBAR ====================*/
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -49,8 +106,16 @@ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*==================== TYPED JS ====================*/
-const typed = new Typed('.multiple-text', {
+const typed = new Typed('.multiple-text-en', {
     strings: ['Student', 'Programmer', 'Designer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 100,
+    loop: true
+})
+
+const typedId = new Typed('.multiple-text-id', {
+    strings: ['Mahasiswa', 'Programmer', 'Designer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 100,
@@ -166,10 +231,13 @@ function toggleText(service) {
     var shortText = textContainer.querySelector('.short-text');
     var fullText = textContainer.querySelector('.full-text');
 
+    const readMoreText = localStorage.getItem('language') === 'en' ? 'Read More' : "Baca Selengkapnya";
+    const showLessText = localStorage.getItem('language') === 'en' ? 'Show Less' : "Tampilkan Lebih Sedikit";
+
     if (shortText && fullText) {
         shortText.style.display = shortText.style.display === 'none' ? 'block' : 'none';
         fullText.style.display = fullText.style.display === 'none' ? 'block' : 'none';
-        document.querySelector(`#${service} .read-more`).textContent = shortText.style.display === 'none' ? 'Show Less' : 'Read More';
+        document.querySelector(`#${service} .read-more`).textContent = shortText.style.display === 'none' ? showLessText : readMoreText;
     }
 }
 

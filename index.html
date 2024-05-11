@@ -53,20 +53,36 @@
 <body>
     <!-- header design -->
     <header class="header">
-        <a href="" class="logo">Personal Web</a>
+        <a href="" class="logo" data-i18n="personal_web"></a>
 
         <i class='bx bx-menu' id="menu-icon" style="cursor: pointer;"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="/blog.html" class="active">Blog</a>
-            <a href="#about">About</a>
-            <a href="#skill">Skills</a>
-            <a href="#educationbg">Journey</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active" data-i18n="navbar_home"></a>
+            <a href="/blog.html" class="active" data-i18n="navbar_blog"></a>
+            <a href="#about" data-i18n="navbar_about"></a>
+            <a href="#skill" data-i18n="navbar_skills"></a>
+            <a href="#educationbg" data-i18n="navbar_journey"></a>
+            <a href="#services" data-i18n="navbar_services"></a>
+            <a href="#portfolio" data-i18n="navbar_portfolio"></a>
+            <a href="#contact" data-i18n="navbar_contact"></a>
             <a id="toggle-mode"><i class='bx bx-moon'></i></a>
+            <a>
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                            style="width: 30px; height: 20px;" />
+                    </div>
+                    <div class="dropdown-content">
+                        <span class="a-language" onclick="changeLanguage('en')" href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                                style="width: 30px; height: 20px; margin-right: 0.5rem;" />EN</span>
+                        <span class="a-language" onclick="changeLanguage('id')" href="#"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png"
+                                style="width: 30px; height: 20px; margin-right: 0.5rem;" />ID</span>
+                    </div>
+                </div>
+            </a>
         </nav>
     </header>
 
@@ -74,12 +90,11 @@
         <!-- home section design -->
         <section class="home" id="home">
             <div class="home-content">
-                <h3>Hello, It's Me</h3>
+                <h3 data-i18n="home_hello"></h3>
                 <h1>Kadek Widiana</h1>
-                <h3>And I'm a <span class="multiple-text"></span></h3>
-                <p>I am an Informatics Engineering student at Ganesha University of Education, I have an interest in
-                    Programming and
-                    Design</p>
+                <h3 id="multiple-text-en">And I'm a <span class="multiple-text-en"></span></h3>
+                <h3 id="multiple-text-id">Dan saya seorang <span class="multiple-text-id"></span></h3>
+                <p data-i18n="home_description"></p>
                 <div class="social-media">
                     <a href="https://www.linkedin.com/in/kadekwidiana10/" target="_blank"><i
                             class='bx bxl-linkedin'></i></a>
@@ -89,7 +104,7 @@
                     <a href="https://www.youtube.com/@kadekwidiana10" target="_blank"><i class='bx bxl-youtube'></i></a>
                 </div>
                 <!-- Histats.com  (div with counter) -->
-                <a href="#contact" class="btn">Contact Me <i class='bx bx-send'></i></a>
+                <a href="#contact" class="btn" data-i18n="home_contact_me"><i class='bx bx-send'></i></a>
                 <div id="histats_counter" style="margin-top: 10px;"></div>
             </div>
 
@@ -105,27 +120,24 @@
             </div>
 
             <div class="about-content">
-                <h2 class="heading">About <span>Me</span></h2>
+                <div style="display: flex; justify-content: start; gap: 1rem;">
+                    <h2 class="heading" data-i18n="about_about"> </h2>
+                    <h2 class="heading"> <span data-i18n="about_me"></span></h2>
+                </div>
                 <!-- <h3>Frontend Develover</h3> -->
-                <p>I am a Software Engineering Technology Student at Ganesha University of Education with an interest in
-                    Software Development. Start developing interests and skills from college, project-based learning,
-                    and self-taught for a deeper understanding. Continue to hone skills through projects and participate
-                    in industry programs to gain practical
-                    experience in the field. Have high curiosity about the field of interest.</p>
+                <p data-i18n="about_description"></p>
                 <div class="about-info">
                     <div>
                         <span class="about-info-title"><i class='bx bxs-graduation'></i></span>
-                        <span class="about-info-name">Informatic<br />Engineering<br />Student</span>
+                        <span class="about-info-name" data-i18n="about_student"></span>
                     </div>
                     <div>
                         <span class="about-info-title"><i class='bx bx-briefcase'></i></span>
-                        <span class="about-info-name">Project <br />
-                            Experience</span>
+                        <span class="about-info-name" data-i18n="about_project_experience"></span>
                     </div>
                     <div>
                         <span class="about-info-title"><i class='bx bx-network-chart'></i></span>
-                        <span class="about-info-name">Intership <br />
-                            Experience</span>
+                        <span class="about-info-name" data-i18n="about_internship_experience"></span>
                     </div>
                 </div>
                 <a href="assets/CV_Kadek Widiana.pdf" class="btn">Download CV <i class='bx bxs-download'></i></a>
@@ -134,7 +146,7 @@
 
         <!--==================== SKILLS ====================-->
         <section class="skills_section" id="skill">
-            <h2 class="heading"><span>Skills</span></h2>
+            <h2 class="heading"><span data-i18n="skills"></span></h2>
 
             <div class="skills__container container grid">
                 <div>
@@ -144,7 +156,7 @@
                             <i class="bx bx-code-block skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Web Develover</h1>
+                                <h1 class="skills__title" data-i18n="skills_web_develover"></h1>
                                 <!-- <span class="skills__subtitle">More than 2 years</span> -->
                             </div>
 
@@ -220,7 +232,7 @@
                             <i class="bx bxs-devices skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Mobile Develover</h1>
+                                <h1 class="skills__title" data-i18n="skills_mobile_developer"></h1>
                                 <!-- <span class="skills__subtitle">More than 2 years</span> -->
                             </div>
 
@@ -249,7 +261,7 @@
                             <i class="bx bx-globe skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">GIS Application</h1>
+                                <h1 class="skills__title" data-i18n="skills_gis_application"></h1>
                                 <!-- <span class="skills__subtitle">More than 3 years</span> -->
                             </div>
 
@@ -295,7 +307,7 @@
                             <i class="bx bx-palette skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Designer</h1>
+                                <h1 class="skills__title" data-i18n="skills_designer"></h1>
                                 <!-- <span class="skills__subtitle">More than 3 years</span> -->
                             </div>
 
@@ -381,19 +393,24 @@
 
         <!--==================== QUALIFICATION/JOURNEY ====================-->
         <section class="education_section" id="educationbg">
-            <h2 class="heading">Personal <span>Journey</span></h2>
+            <div style="display: flex; justify-content: center; gap: 1rem; text-align: center;">
+                <h2 class="heading" data-i18n="journey_personal"> </h2>
+                <h2 class="heading"> <span data-i18n="journey_journey"></span></h2>
+            </div>
 
             <div class="qualification__container container">
                 <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target='#education'
+                    <div style="display: flex; justify-content: start; gap: 4px;"
+                        class="qualification__button button--flex qualification__active" data-target='#education'
                         onclick="showContent('education', 'btn-edu', 'btn-exp')" id="btn-edu">
                         <i class='bx bxs-graduation'></i>
-                        Education
+                        <div data-i18n="journey_education">Education</div>
                     </div>
-                    <div class="qualification__button button--flex" data-target='#experience'
+                    <div style="display: flex; justify-content: start; gap: 4px;"
+                        class="qualification__button button--flex" data-target='#experience'
                         onclick="showContent('experience', 'btn-exp', 'btn-edu')" id="btn-exp">
                         <i class='bx bx-briefcase'></i>
-                        Experience
+                        <div data-i18n="journey_experience">Experience</div>
                     </div>
                 </div>
                 <div class="qualification__sections">
@@ -401,11 +418,14 @@
                     <div class="qualification__content " data-content id="education">
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Software Engineering Technology</h3>
-                                <span class="qualification__subtitle">Ganesha University of Education</span>
+                                <h3 class="qualification__title" data-i18n="journey_trpl"></h3>
+                                <span class="qualification__subtitle" data-i18n="journey_undiksha">Ganesha University of
+                                    Education</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    2021 - Now
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div data-i18n="journey_2021_now"></div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -422,24 +442,27 @@
                                 <span class="qualification__line"></span>
                             </div>
                             <div>
-                                <h3 class="qualification__title">Mathematics and Natural Science</h3>
+                                <h3 class="qualification__title" data-i18n="journey_mipa"></h3>
                                 <span class="qualification__subtitle">SMA N 1 Rendang</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    2018 - 2021
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div>2018 - 2021</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!--==================== QUALIFICATION 3 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Junior High School</h3>
+                                <h3 class="qualification__title" data-i18n="journey_smp"></h3>
                                 <span class="qualification__subtitle">SMP N 1 Selat</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    2015 - 2018
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div>2015 - 2018</div>
+                                    </div>
                                 </div>
-
                             </div>
 
                             <div>
@@ -455,11 +478,13 @@
                                 <!-- <span class="qualification__line"></span> -->
                             </div>
                             <div>
-                                <h3 class="qualification__title">Elementy School</h3>
+                                <h3 class="qualification__title" data-i18n="journey_sd"></h3>
                                 <span class="qualification__subtitle">SD N 5 Muncan</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    2009 - 2015
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div>2009 - 2015</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -475,11 +500,13 @@
                                 <span class="qualification__line"></span>
                             </div>
                             <div>
-                                <h3 class="qualification__title">Industrial Internship (Web Developer)</h3>
+                                <h3 class="qualification__title" data-i18n="journey_intern_industry"></h3>
                                 <span class="qualification__subtitle">PT. Dimata IT Solutions</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    January 2024 - Now
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div data-i18n="journey_january_2024_now"></div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -487,11 +514,13 @@
                         <!--==================== QUALIFICATION 1 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Student Independent Study/Project</h3>
-                                <span class="qualification__subtitle">MBKM Ganesha University of Education</span>
+                                <h3 class="qualification__title" data-i18n="journey_pim"></h3>
+                                <span class="qualification__subtitle" data-i18n="journey_mbkm_undiksha"></span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    September - December 2023
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div data-i18n="journey_pim_sept_dec_2023"></div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -508,11 +537,13 @@
                                 <span class="qualification__line"></span>
                             </div>
                             <div>
-                                <h3 class="qualification__title">Entrepreneurial Student Program</h3>
-                                <span class="qualification__subtitle">PMW Ganesha University of Education</span>
+                                <h3 class="qualification__title" data-i18n="journey_pmw"></h3>
+                                <span class="qualification__subtitle" data-i18n="journey_pmw_undiksha"></span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    July - December 2023
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div data-i18n="journey_pmw_july_dec_2023"></div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -520,12 +551,14 @@
                         <!--==================== QUALIFICATION 3 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Research Internship</h3>
+                                <h3 class="qualification__title" data-i18n="journey_research_internship"></h3>
                                 <span class="qualification__subtitle">KMUTT Geospatial Engineering and InnOvation Center
-                                    (KGEO)</span>
+                                    (KGEO) Thailand</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    July - October 2023
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div data-i18n="journey_research_july_oct_2023"></div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -542,23 +575,26 @@
                                 <span class="qualification__line"></span>
                             </div>
                             <div>
-                                <h3 class="qualification__title">Student Committee</h3>
-                                <span class="qualification__subtitle">BEM FTK Ganesha University of Education</span>
+                                <h3 class="qualification__title" data-i18n="journey_bem"></h3>
+                                <span class="qualification__subtitle" data-i18n="journey_bem_ftk"></span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    2022
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div>2022</div>
+                                    </div>
                                 </div>
-
                             </div>
                         </div>
                         <!--==================== QUALIFICATION 3 ====================-->
                         <div class="qualification__data">
                             <div>
-                                <h3 class="qualification__title">Digital Talent Scholarship</h3>
+                                <h3 class="qualification__title" data-i18n="journey_kominfo"></h3>
                                 <span class="qualification__subtitle">Kominfo</span>
                                 <div class="qualification__calendar">
-                                    <i class='bx bx-calendar'></i>
-                                    2022
+                                    <div style="display: flex; justify-content: start; gap: 4px; align-items: center;">
+                                        <i class='bx bx-calendar'></i>
+                                        <div>2022</div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -575,55 +611,48 @@
 
         <!--==================== SERVICES ====================-->
         <section class="services" id="services">
-            <h2 class="heading"> <span>Services</span></h2>
+            <h2 class="heading"> <span data-i18n="services"></span></h2>
 
             <div class="services-container">
                 <div class="services-box" id="web-development">
                     <i class="bx bx-code-alt"></i>
-                    <h3>Web Development</h3>
+                    <h3 data-i18n="services_web_dev"></h3>
                     <div class="text-container">
-                        <p class="short-text">I have expertise in web application development,
-                            mastering HTML, CSS, JavaScript, and....</p>
-                        <p class="full-text" style="display: none;">I have expertise in web application development,
-                            mastering HTML, CSS, JavaScript, and PHP
-                            along with a supporting framework. With an understanding of front-end concepts and
-                            back-end, creating innovative web solutions.</p>
+                        <p class="short-text" data-i18n="services_web_dev_p1"></p>
+                        <p class="full-text" style="display: none;" data-i18n="services_web_dev_p2"></p>
                     </div>
-                    <a class="btn read-more" onclick="toggleText('web-development')">Read More</a>
+                    <a class="btn read-more" onclick="toggleText('web-development')" data-i18n="services_read_more"></a>
                 </div>
 
                 <div class="services-box" id="mobile-development">
                     <i class='bx bx-mobile-alt'></i>
-                    <h3>Mobile Development</h3>
+                    <h3 data-i18n="services_mobile_dev"></h3>
                     <div class="text-container">
-                        <p class="short-text">I have expertise in mobile application development with
-                            using the Dart programming language....</p>
-                        <p class="full-text" style="display: none;">I have expertise in mobile application development
-                            with
-                            using the Dart programming language, the Flutter framework.</p>
+                        <p class="short-text" data-i18n="services_mobile_dev_p1"></p>
+                        <p class="full-text" style="display: none;" data-i18n="services_mobile_dev_p2"></p>
                     </div>
-                    <a class="btn read-more" onclick="toggleText('mobile-development')">Read More</a>
+                    <a class="btn read-more" onclick="toggleText('mobile-development')"
+                        data-i18n="services_read_more"></a>
                 </div>
 
                 <div class="services-box" id="graphic-design">
                     <i class="bx bxs-paint"></i>
-                    <h3>Graphic Design</h3>
+                    <h3 data-i18n="services_design"></h3>
                     <div class="text-container">
-                        <p class="short-text">I have expertise in graphic design, prioritizing
-                            creativity and visual aesthetics. With
-                            experience....</p>
-                        <p class="full-text" style="display: none;">I have expertise in graphic design, prioritizing
-                            creativity and visual aesthetics. With
-                            experience using Figma and Canva.</p>
+                        <p class="short-text" data-i18n="services_design_p1"></p>
+                        <p class="full-text" style="display: none;" data-i18n="services_design_p2"></p>
                     </div>
-                    <a class="btn read-more" onclick="toggleText('graphic-design')">Read More</a>
+                    <a class="btn read-more" onclick="toggleText('graphic-design')" data-i18n="services_read_more"></a>
                 </div>
             </div>
         </section>
 
         <!--==================== PORTFOLIO ====================-->
         <section class="portfolio" id="portfolio">
-            <h2 class="heading">My <span>Portfolio</span></h2>
+            <div style="display: flex; justify-content: center; gap: 1rem; text-align: center;">
+                <h2 class="heading" data-i18n="portfolio_my"> </h2>
+                <h2 class="heading"> <span data-i18n="portfolio_port"></span></h2>
+            </div>
             <div class="portfolio-container" id="portfolio-container">
                 <!-- Web DEWaS -->
                 <div class="">
@@ -631,7 +660,7 @@
                         <img loading="lazy" src="assets/portfolio/web-dewas/dewas-bpbd.png" alt="Web DEWaS">
                         <div class="portfolio-layer">
                             <h4>Web DEWaS BPBD Denpasar</h4>
-                            <p>Intership project development of disaster and emergency warning systems.</p>
+                            <p data-i18n="portfolio_dewas_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-web-dewas"><i
                                         class='bx bx-info-circle'></i></a>
@@ -644,7 +673,7 @@
                     <div class="modal" id="modal-web-dewas">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Web DEWaS(Disaster & Emergency Warning System) Denpasar City BPBD</strong>
+                                <p><strong data-i18n="portfolio_dewas_title"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -677,18 +706,12 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>This project is my internship project at PT. Dimata IT Solutions
-                                    Disaster and emergency warning systems are a set of procedures, technologies, and
-                                    communication channels implemented to detect and alert individuals and communities
-                                    about potential disasters or ongoing emergencies.</p>
-                                <p>This system is used by the Denpasar City BPBD to view updates on incident reports and
-                                    monitor emergency conditions.</p>
-                                <p>The website developed aims to display information related to disaster reports in the
-                                    city of Denpasar and monitoring water levels in several locations that have
-                                    installed Automatic Water Level Recorders (AWLR).</p>
-                                <p>Making: January 2024 - April 2024</p>
+                                <p data-i18n="portfolio_dewas_p1"></p>
+                                <p data-i18n="portfolio_dewas_p2"></p>
+                                <p data-i18n="portfolio_dewas_p3"></p>
+                                <p data-i18n="portfolio_dewas_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_dewas_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>HTML</li>
                                         <li>CSS</li>
@@ -710,8 +733,7 @@
                         <img loading="lazy" src="assets/portfolio/game-pralformer-web/game-web.png" alt="Web DEWaS">
                         <div class="portfolio-layer">
                             <h4>Game Flatformer Web</h4>
-                            <p>Platformer web game with interesting levels and obstacles, can be played directly via the
-                                web without the need to download</p>
+                            <p data-i18n="portfolio_game_web_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-game-web"><i
                                         class='bx bx-info-circle'></i></a>
@@ -749,14 +771,11 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>Platformer web game with interesting levels and obstacles, can be played directly via
-                                    the web without needing to download.
-                                </p>
-                                <p>This project is the final assignment of the game technology course. By using the
-                                    gameLib.js library provided by one of the developers in Indonesia</p>
-                                <p>Making: December 2023</p>
+                                <p data-i18n="portfolio_game_web_p1"></p>
+                                <p data-i18n="portfolio_game_web_p2"></p>
+                                <p data-i18n="portfolio_game_web_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_game_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>HTML</li>
                                         <li>CSS</li>
@@ -788,7 +807,7 @@
                         <img loading="lazy" src="assets/portfolio/webgis/web-wefgis.png" alt="Web DEWaS">
                         <div class="portfolio-layer">
                             <h4>WebGIS</h4>
-                            <p>Website-based Geographic Information system for mapping with geospatial technology.</p>
+                            <p data-i18n="portfolio_webgis_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-webgis"><i class='bx bx-info-circle'></i></a>
                                 <a href="https://github.com/kadekwidiana/webgis-API.git"
@@ -802,8 +821,7 @@
                     <div class="modal" id="modal-webgis">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Website-based Geographic Information System for agricultural land
-                                        mapping and visualization of geospatial information</strong>
+                                <p><strong data-i18n="portfolio_webgis_title"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -828,16 +846,11 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>Website-based Geographic Information System (WEBGIS) for mapping agricultural land
-                                    and visualizing geospatial information.
-                                </p>
-                                <p>WebGIS is used specifically for agricultural land mapping, as well as visualization
-                                    and analysis of geospatial data. This WEBGIS integrates Geoserver technology as a
-                                    spatial data server and Google Earth Engine for sophisticated visualization and
-                                    analysis of geospatial information.</p>
-                                <p>Making: July 2023 - December 2023</p>
+                                <p data-i18n="portfolio_webgis_p1"></p>
+                                <p data-i18n="portfolio_webgis_p2"></p>
+                                <p data-i18n="portfolio_webgis_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_webgis_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>HTML</li>
                                         <li>CSS</li>
@@ -874,8 +887,7 @@
                         <img loading="lazy" src="assets/portfolio/crops-apps/crops-apps-1.png" alt="Web DEWaS">
                         <div class="portfolio-layer">
                             <h4>Crops Apps</h4>
-                            <p>Crops Application data management with the integration of Machine Learning technology and
-                                Google Maps.</p>
+                            <p data-i18n="portfolio_crops_apps_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-crops-apps"><i
                                         class='bx bx-info-circle'></i></a>
@@ -889,8 +901,7 @@
                     <div class="modal" id="modal-crops-apps">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Crops Apps: Object-Based Image Classification of Economic Crops with Machine
-                                        Learning Methods</strong>
+                                <p><strong data-i18n="portfolio_crops_apps_title"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -917,19 +928,11 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>This mobile application is an application for managing plant data developed with the
-                                    Flutter framework. This application utilizes the integration of Machine Learning
-                                    technology, Google Maps API, and GeoTagging to make it easier for users to manage
-                                    data and information related to plants. </p>
-                                <p>The mobile application has a number of
-                                    features that support data management. One of them is the ability to automatically
-                                    identify plant types based on uploaded images, using Machine Learning (ML)
-                                    technology to carry out this detection. In addition, this application will have a
-                                    GeoTagging feature which allows users to tag locations automatically or manually
-                                    according to user needs.</p>
-                                <p>Making: July 2023 - October 2023</p>
+                                <p data-i18n="portfolio_crops_apps_p1"></p>
+                                <p data-i18n="portfolio_crops_apps_p2"></p>
+                                <p data-i18n="portfolio_crops_apps_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_crops_apps_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>Dart</li>
                                         <li>Flutter</li>
@@ -960,8 +963,7 @@
                             alt="Web Rental Motor">
                         <div class="portfolio-layer">
                             <h4>Web Rental Motor</h4>
-                            <p>Motorbike rental management system with efficient features in managing motorbike rentals
-                                and providing information media related to motorbike rentals.</p>
+                            <p data-i18n="portfolio_web_rental_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-web-rental-motor"><i
                                         class='bx bx-info-circle'></i></a>
@@ -975,7 +977,7 @@
                     <div class="modal" id="modal-web-rental-motor">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Web Management Rental Motor</strong>
+                                <p><strong data-i18n="portfolio_web_rental_title"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -1005,18 +1007,11 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>A motorbike rental management system built using the Laravel framework presents an
-                                    efficient solution for managing motorbike rentals with advanced and intuitive
-                                    features.</p>
-                                <p>With the ability to track inventory, manage orders, employees, motorbike data,
-                                    motorbike
-                                    maintenance, reports and provide information media related to motorbike rental, this
-                                    application helps service providers to increase operational efficiency and provide a
-                                    better experience for customers.
-                                </p>
-                                <p>Making: January 2023 - July 2023</p>
+                                <p data-i18n="portfolio_web_rental_p1"></p>
+                                <p data-i18n="portfolio_web_rental_p2"></p>
+                                <p data-i18n="portfolio_web_rental_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_web_rental_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>HTML</li>
                                         <li>CSS</li>
@@ -1051,7 +1046,7 @@
                         <img loading="lazy" src="assets/portfolio/wisata-apps/wisata-app-1.png" alt="Wisata Apps">
                         <div class="portfolio-layer">
                             <h4>Wisata Apps</h4>
-                            <p>Location-based tourist attraction application, integration of technology Google Maps.</p>
+                            <p data-i18n="portfolio_wisata_apps_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-app_wisata"><i
                                         class='bx bx-info-circle'></i></a>
@@ -1065,7 +1060,7 @@
                     <div class="modal" id="modal-app_wisata">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Wisata Apps based location</strong>
+                                <p><strong data-i18n="portfolio_wisata_apps_title"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -1086,12 +1081,10 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>Location-based tourism apps created using Flutter allow users to find tourist
-                                    attractions easily, offering detailed information, navigation features. With an
-                                    intuitive interface and attractive design.</p>
-                                <p>Making: May 2023 - June 2023 </p>
+                                <p data-i18n="portfolio_wisata_apps_p1"></p>
+                                <p data-i18n="portfolio_wisata_apps_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_wisata_apps_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>Dart</li>
                                         <li>Flutter</li>
@@ -1121,8 +1114,8 @@
                         <img loading="lazy" src="assets/portfolio/web-silangjana-village/web-silangjana-village-1.png"
                             alt="Web Silangjana Village">
                         <div class="portfolio-layer">
-                            <h4>Web Silangjana Village</h4>
-                            <p>Website Landing Page for information media in Silangjana village.</p>
+                            <h4 data-i18n="portfolio_web_silangjana"></h4>
+                            <p data-i18n="portfolio_web_silangjana_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-web-silangjana-village"><i
                                         class='bx bx-info-circle'></i></a>
@@ -1137,7 +1130,7 @@
                     <div class="modal" id="modal-web-silangjana-village">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Web Silangjana Village</strong>
+                                <p><strong data-i18n="portfolio_web_silangjana"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -1167,12 +1160,10 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>The landing page website for information media in Silangjana village provides a
-                                    platform that presents the latest and relevant information about the village,
-                                    tourist attractions and others.</p>
-                                <p>Making: February 2023 - March 2023</p>
+                                <p data-i18n="portfolio_web_silangjana_p1"></p>
+                                <p data-i18n="portfolio_web_silangjana_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_web_silangjana_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>HTML</li>
                                         <li>CSS</li>
@@ -1204,7 +1195,7 @@
                             alt="Design UI Web Part Time">
                         <div class="portfolio-layer">
                             <h4>Design UI Web Part Time</h4>
-                            <p>Website UI design for looking for part-time work.</p>
+                            <p data-i18n="portfolio_web_design_ui_web_pt_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-design-ui-web-part-time"><i
                                         class='bx bx-info-circle'></i></a>
@@ -1244,13 +1235,10 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>Design a website UI for looking for part-time jobs using Figma, offering an intuitive
-                                    and efficient experience for job seekers with a clean layout and advanced search
-                                    features, as well as social media integration and interactive features to increase
-                                    user engagement, while ensuring consistency of user experience across devices .</p>
-                                <p>Making: September 2022 - December 2022</p>
+                                <p data-i18n="portfolio_web_design_ui_web_pt_p1"></p>
+                                <p data-i18n="portfolio_web_design_ui_web_pt_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_web_design_ui_web_pt_tools_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>Figma</li>
                                     </ul>
@@ -1277,8 +1265,8 @@
                         <img loading="lazy" src="assets/portfolio/web-muncan-village/web-muncan-village-1.png"
                             alt="Web Muncan Villlage">
                         <div class="portfolio-layer">
-                            <h4>Web Muncan Villlage</h4>
-                            <p>The Muncan village website as a medium for information related to Muncan village.</p>
+                            <h4 data-i18n="portfolio_web_muncan_village"></h4>
+                            <p data-i18n="portfolio_web_muncan_village_p"></p>
                             <div class="portfolio-target">
                                 <a class="portfolio-link" data-open="modal-web-muncan-village"><i
                                         class='bx bx-info-circle'></i></a>
@@ -1293,7 +1281,7 @@
                     <div class="modal" id="modal-web-muncan-village">
                         <div class="modal-dialog">
                             <div class="modal-header">
-                                <p><strong>Web Muncan Villlage</strong>
+                                <p><strong data-i18n="portfolio_web_muncan_village"></strong>
                                 </p>
                                 <button class="close-modal" aria-label="close modal" data-close>
                                     ✕
@@ -1311,16 +1299,11 @@
                                 </div>
                                 <br>
                                 <br>
-                                <p>The Muncan Village website as an information medium related to Muncan Village, was
-                                    built using the WordPress platform, providing news, activities and information
-                                    related to the latest developments in the village.</p>
-                                <p>With a user-friendly layout and
-                                    interactive features, this website facilitates information exchange and
-                                    collaboration between residents and village government, strengthening community ties
-                                    and promoting Muncan Village.</p>
-                                <p>Making: March 2022 - July 2022</p>
+                                <p data-i18n="portfolio_web_muncan_village_p1"></p>
+                                <p data-i18n="portfolio_web_muncan_village_p2"></p>
+                                <p data-i18n="portfolio_web_muncan_village_making"></p>
                                 <div>
-                                    <p>Tech used:</p>
+                                    <p data-i18n="portfolio_web_muncan_village_tech_used"></p>
                                     <ul style="padding-left: 1.5rem;">
                                         <li>WordPress</li>
                                         <li>Elementor</li>
@@ -1337,7 +1320,10 @@
 
         <!-- contact section design -->
         <section class="contact" id="contact">
-            <h2 class="heading">Contact <span>Me!</span></h2>
+            <div style="display: flex; justify-content: center; gap: 1rem; text-align: center;">
+                <h2 class="heading" data-i18n="contact_contact"> </h2>
+                <h2 class="heading"> <span data-i18n="contact_me"></span></h2>
+            </div>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-information">
@@ -1350,21 +1336,21 @@
                     <div class="contact-information">
                         <i class='bx bx-map'></i>
                         <div>
-                            <h3 class="contact__title">Address</h3>
+                            <h3 class="contact__title" data-i18n="contact_address">Address</h3>
                             <span class="contact__subtitle">Muncan, Selat, Karangasem, Bali</span>
                         </div>
                     </div>
                     <!-- Peta menggunakan iframe -->
                     <div class="contact-information">
                         <div>
-                            <h3 class="contact__title">Maps</h3>
+                            <h3 class="contact__title" data-i18n="contact_maps"></h3>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31573.92633203128!2d115.4283093917591!3d-8.427096913164402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21b1f4d7c2a1f%3A0xf5ab83b57f87beec!2sMuncan%2C%20Kec.%20Selat%2C%20Kabupaten%20Karangasem%2C%20Bali!5e0!3m2!1sid!2sid!4v1713615219687!5m2!1sid!2sid"
                                 width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="">
+                <div id="form_input_contact_en" class="">
                     <form action="">
                         <div class="input-box">
                             <input type="text" placeholder=" Full name" required>
@@ -1382,7 +1368,31 @@
                             </div>
                         </div>
                         <div class="submit-btn">
-                            <button id="buttonSend" type="submit" class="btn-not-validate">Send Message</button>
+                            <button id="buttonSend" type="submit" class="btn-not-validate"
+                                data-i18n="contact_send_message"></button>
+                        </div>
+                    </form>
+                </div>
+                <div id="form_input_contact_id" class="">
+                    <form action="">
+                        <div class="input-box">
+                            <input type="text" placeholder="Nama Lengkap" required>
+                            <input type="email" placeholder="Alamat Email" required>
+                        </div>
+                        <div class="input-box">
+                            <input type="number" placeholder="Nomor Handphone" required>
+                            <input type="text" placeholder="Subject Email" required>
+                        </div>
+                        <textarea name="" id="" cols="20" rows="5" placeholder="Pesan Anda" required></textarea>
+                        <div class="input-box">
+                            <div class="g-recaptcha" data-sitekey="6LdZyW0pAAAAAMsK07rZU2ldipiRpkgmZacKjbs0"
+                                data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry"
+                                data-error-callback="onRecaptchaError">
+                            </div>
+                        </div>
+                        <div class="submit-btn">
+                            <button id="buttonSend" type="submit" class="btn-not-validate"
+                                data-i18n="contact_send_message"></button>
                         </div>
                     </form>
                 </div>
