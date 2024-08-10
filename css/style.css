@@ -316,7 +316,7 @@ span {
 
 .skills__name,
 .skills__number {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 100;
 }
 
@@ -333,6 +333,10 @@ span {
 .skills__percentage {
     display: block;
     background-color: var(--main-color);
+}
+
+.skills__full {
+    width: 100%;
 }
 
 .skills__html {
