@@ -5,7 +5,7 @@ let navbar = document.querySelector('.navbar');
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
-}
+};
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 let sections = document.querySelectorAll('section');
@@ -27,12 +27,12 @@ window.onscroll = () => {
     });
     /*==================== sticky navbar ====================*/
     let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100)
+    header.classList.toggle('sticky', window.scrollY > 100);
 
     /*==================== remove toggle icon and navbar when click navbar link (scroll) ====================*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
-}
+};
 
 
 /*==================== SCROLL REVERAL ====================*/
@@ -55,7 +55,7 @@ const typed = new Typed('.multiple-text', {
     backSpeed: 100,
     backDelay: 100,
     loop: true
-})
+});
 
 /*==================== DARK MODE ====================*/
 const toggleModeButton = document.getElementById('toggle-mode');
@@ -85,21 +85,21 @@ if (savedDarkMode === 'true') {
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName("skills__content"),
-    skillsHeader = document.querySelectorAll(".skills__header")
+    skillsHeader = document.querySelectorAll(".skills__header");
 
 function toggleSkills() {
-    let itemClass = this.parentNode.className
+    let itemClass = this.parentNode.className;
 
     for (i = 0; i < skillsContent.length; i++) {
-        skillsContent[i].className = "skills__content skills__close"
+        skillsContent[i].className = "skills__content skills__close";
     }
     if (itemClass === "skills__content skills__close") {
-        this.parentNode.className = "skills__content skills__open"
+        this.parentNode.className = "skills__content skills__open";
     }
 }
 
 skillsHeader.forEach((el) => {
-    el.addEventListener("click", toggleSkills)
+    el.addEventListener("click", toggleSkills);
 });
 
 /*==================== TAB PERSONAL JOURNEY ====================*/
@@ -175,7 +175,7 @@ function toggleText(service) {
 
 // RECAPTCHA
 /*==================== RECAPTCHA ====================*/
-var buttonSend = document.getElementById("buttonSend")
+var buttonSend = document.getElementById("buttonSend");
 function disableButton() {
     buttonSend.setAttribute("disabled", "disabled");
     buttonSend.classList.add('btn-not-validate');
@@ -203,7 +203,7 @@ function onRecaptchaError() {
 /*==================== HISTATS ANALITIC ====================*/
 // <!-- Histats.com   (aync)-->
 var _Hasync = _Hasync || [];
-_Hasync.push(['Histats.start', '1,4843723,4,107,170,20,00001010']);
+_Hasync.push(['Histats.start', '1,4917336,4,107,170,20,00001010']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
 (function () {
