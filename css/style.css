@@ -46,7 +46,7 @@ body {
 
 section {
     /* min-height: 100vh; */
-    padding: 10rem 9% 2rem;
+    padding: 5rem 9% 3rem;
 }
 
 .header {
@@ -96,6 +96,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10rem;
 }
 
 
@@ -209,7 +210,7 @@ span {
 }
 
 .about-img img {
-    width: 35vw;
+    width: 30vw;
 }
 
 .heading {
@@ -971,7 +972,7 @@ span {
     }
 
     section {
-        padding: 10rem 3% 2rem;
+        padding: 5rem 3% 3rem;
     }
 
     .services {
@@ -1291,4 +1292,103 @@ span {
     .carousel img {
         height: 400px;
     }
+}
+
+/* SKILLS NEW */
+/* Container utama */
+.skills-container-new {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* Default untuk layar besar */
+    gap: 16px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Responsif untuk tampilan laptop (1024px ke bawah) */
+@media (max-width: 1024px) {
+    .skills-container-new {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 kolom */
+    }
+}
+
+/* Responsif untuk tampilan tablet (768px ke bawah) */
+@media (max-width: 768px) {
+    .skills-container-new {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 kolom */
+    }
+}
+
+/* Responsif untuk tampilan HP (480px ke bawah) */
+@media (max-width: 480px) {
+    .skills-container-new {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolom */
+    }
+}
+
+/* Gaya untuk setiap skill item */
+.skills-container-new>div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Sembunyikan area di luar elemen saat gambar diperbesar */
+}
+
+/* Gambar yang responsif */
+.skills-container-new>div img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    /* Membatasi gambar agar tidak melampaui container */
+    height: auto;
+    /* Menjaga rasio aspek gambar */
+    width: 120px;
+    padding: 20px;
+    cursor: pointer;
+    /* Ukuran default */
+    transition: transform 0.3s ease;
+    /* Animasi transformasi gambar */
+}
+
+/* Responsif: Sesuaikan ukuran gambar untuk perangkat yang lebih kecil */
+@media (max-width: 1024px) {
+    .skills-container-new>div img {
+        width: 110px;
+        /* Ukuran gambar di laptop */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container-new>div img {
+        width: 100px;
+        /* Ukuran gambar di tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container-new>div img {
+        width: 90px;
+        /* Ukuran gambar di HP */
+    }
+}
+
+/* Text */
+.skills-text {
+    font-size: 1.6rem;
+    color: var(--primary-text-color);
+}
+
+/* Hover Effect: Zoom */
+.skills-container-new img:hover {
+    transform: scale(1.2);
+    /* Perbesar gambar hingga 120% */
+    transition: transform 0.3s ease-in-out;
+    /* Animasi halus */
 }

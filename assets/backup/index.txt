@@ -1,0 +1,241 @@
+<!--==================== SKILLS ====================-->
+        <section class="skills_section" id="skill">
+            <h2 class="heading"><span>Skills</span></h2>
+
+            <div class="skills__container container grid">
+                <div>
+                    <!--==================== SKILLS 1 ====================-->
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="bx bx-code-block skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Web Development</h1>
+                                <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                            </div>
+
+                            <i class="bx bx-chevron-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">HTML</h3>
+                                    <!-- <span class="skills__number">75%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">CSS (Bootstrap, TailwindCSS)</h3>
+                                    <!-- <span class="skills__number">65%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Javascript (React/NextJS)</h3>
+                                    <!-- <span class="skills__number">70%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">PHP (Laravel)</h3>
+                                    <!-- <span class="skills__number">70%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">MySQL</h3>
+                                    <!-- <span class="skills__number">65%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <!-- <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Github</h3>
+                                <span class="skills__number">60%</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__github"></span>
+                            </div>
+                        </div> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 2 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="bx bxs-devices skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Mobile Development</h1>
+                                <!-- <span class="skills__subtitle">More than 2 years</span> -->
+                            </div>
+
+                            <i class="bx bx-chevron-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Dart (Flutter)</h3>
+                                    <!-- <span class="skills__number">65%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 3 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="bx bx-globe skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">GIS Application</h1>
+                                <!-- <span class="skills__subtitle">More than 3 years</span> -->
+                            </div>
+
+                            <i class="bx bx-chevron-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">QGIS</h3>
+                                    <!-- <span class="skills__number">50%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">GeoServer</h3>
+                                    <!-- <span class="skills__number">50%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <!-- <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">LeafletJS</h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 4 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="bx bx-palette skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Design</h1>
+                                <!-- <span class="skills__subtitle">More than 3 years</span> -->
+                            </div>
+
+                            <i class="bx bx-chevron-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Canva</h3>
+                                    <!-- <span class="skills__number">75%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Figma</h3>
+                                    <!-- <span class="skills__number">60%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <!--==================== SKILLS 5 ====================-->
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="bx bxl-microsoft skills__icon"></i>
+
+                            <div>
+                                <h1 class="skills__title">Microsoft Office</h1>
+                                <!-- <span class="skills__subtitle">More than 3 years</span> -->
+                            </div>
+
+                            <i class="bx bx-chevron-down skills__arrow"></i>
+                        </div>
+
+                        <div class="skills__list grid">
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Word</h3>
+                                    <!-- <span class="skills__number">75%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Excel</h3>
+                                    <!-- <span class="skills__number">60%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Power Point</h3>
+                                    <!-- <span class="skills__number">70%</span> -->
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__full"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
