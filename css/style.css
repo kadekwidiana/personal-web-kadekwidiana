@@ -1428,3 +1428,29 @@ span {
     transition: transform 0.3s ease-in-out;
     /* Animasi halus */
 }
+
+/* Override SweetAlert2 font size to match your design */
+.swal2-popup {
+    font-size: 1.6rem !important;
+    /* Adjust size as needed */
+}
+
+.swal2-title {
+    font-size: 2.5rem !important;
+    /* Adjust title size */
+}
+
+.swal2-text {
+    font-size: 1.25rem !important;
+    /* Adjust text size */
+}
+
+.confirm-button-swal2 {
+    background-color: var(--main-color) !important;
+    color: var(--second-text-color) !important;
+}
+
+.swal2-popup{
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}

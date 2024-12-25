@@ -49,6 +49,9 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.3/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -1596,16 +1599,16 @@
                     </div>
                 </div>
                 <div class="">
-                    <form action="">
+                    <form action="" name="form-contact">
                         <div class="input-box">
-                            <input type="text" placeholder=" Full name" required>
-                            <input type="email" placeholder="Email address" required>
+                            <input name="fullName" type="text" placeholder=" Full name" required>
+                            <input name="email" type="email" placeholder="Email address" required>
                         </div>
                         <div class="input-box">
-                            <input type="number" placeholder="Mobile number" required>
-                            <input type="text" placeholder="Email Subject" required>
+                            <input name="phoneNumber" type="number" placeholder="Phone/WA number" required>
+                            <input name="emailSubject" type="text" placeholder="Email Subject" required>
                         </div>
-                        <textarea name="" id="" cols="20" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea name="message" cols="20" rows="5" placeholder="Your Message" required></textarea>
                         <div class="input-box">
                             <div class="g-recaptcha" data-sitekey="6LfOnaAqAAAAAEWJKrch9ZQRssrUnPrm1ubJuzgB"
                                 data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry"
@@ -1614,6 +1617,8 @@
                         </div>
                         <div class="submit-btn">
                             <button id="buttonSend" type="submit" class="btn-not-validate">Send Message</button>
+                            <button disabled style="display: none; cursor: wait;" id="buttonLoading" type="submit"
+                                class="btn-not-validate">Send Message...</button>
                         </div>
                     </form>
                 </div>
@@ -1642,8 +1647,12 @@
     <!-- typed js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.15.3/dist/sweetalert2.all.min.js"></script>
+
     <!-- main js -->
     <script src="js/script.js"></script>
+
     <!-- Histats.com -->
     <noscript><a href="/" target="_blank"><img loading="lazy" src="//sstatic1.histats.com/0.gif?4843723&101" alt=""
                 border="0"></a></noscript>

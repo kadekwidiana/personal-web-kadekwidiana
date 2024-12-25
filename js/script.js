@@ -262,3 +262,50 @@ document.addEventListener("keyup", e => {
         document.documentElement.classList.remove("modal-open");
     }
 });
+
+
+/*==================== HANDLE SEND FORM CONTACT ====================*/
+const scriptURL = 'https://script.google.com/macros/s/AKfycby7U0euOFbEzMXVcRLMjV2NFHUm699ljKrfgrE3FMthtK7FXzjq4rhDk1_ikBgNEzRX/exec';
+const form = document.forms['form-contact'];
+
+const btnSend = document.getElementById('buttonSend');
+const btnLoading = document.getElementById('buttonLoading');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    btnLoading.style.display = 'block';
+    btnSend.style.display = 'none';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            Swal.fire({
+                title: "Thank You!",
+                text: "Your message has been sent successfully.",
+                icon: "success",
+                customClass: {
+                    popup: 'swal2-popup',
+                    confirmButton: 'confirm-button-swal2',
+                }
+            });
+
+            form.reset();
+            // console.log('Success', response);
+        })
+        .catch(error => {
+            Swal.fire({
+                title: "Oops!",
+                text: "An error occurred while sending the message. Please try again.",
+                icon: "error",
+                customClass: {
+                    popup: 'swal2-popup',
+                    confirmButton: 'confirm-button-swal2',
+                }
+            });
+
+            console.error('Error!', error.message);
+        }).finally(() => {
+            btnLoading.style.display = 'none';
+            btnSend.style.display = 'block';
+        });
+});
