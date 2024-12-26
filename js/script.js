@@ -184,29 +184,52 @@ function toggleText(service) {
 // RECAPTCHA
 /*==================== RECAPTCHA ====================*/
 var buttonSend = document.getElementById("buttonSend");
+
+// State untuk ReCAPTCHA
+var isRecaptchaValid = false;
+
+// Fungsi untuk men-disable tombol
 function disableButton() {
-    buttonSend.setAttribute("disabled", "disabled");
-    buttonSend.classList.add('btn-not-validate');
-    buttonSend.classList.remove('btn');
+    if (buttonSend) {
+        buttonSend.setAttribute("disabled", "disabled"); // Tambahkan atribut disabled
+        buttonSend.classList.add("btn-not-validate");
+        buttonSend.classList.remove("btn");
+    }
 }
 
+// Fungsi untuk men-enable tombol
 function enableButton() {
-    buttonSend.removeAttribute("disabled");
-    buttonSend.classList.remove('btn-not-validate');
-    buttonSend.classList.add('btn');
+    if (buttonSend) {
+        buttonSend.removeAttribute("disabled"); // Hapus atribut disabled
+        buttonSend.classList.remove("btn-not-validate");
+        buttonSend.classList.add("btn");
+    }
 }
 
+// Callback untuk reCAPTCHA sukses
 function onRecaptchaSuccess() {
+    console.log("ReCAPTCHA success");
+    isRecaptchaValid = true; // Tandai state valid
     enableButton();
 }
 
+// Callback untuk ReCAPTCHA kadaluarsa
 function onRecaptchaResponseExpiry() {
+    console.log("ReCAPTCHA expired");
+    isRecaptchaValid = false; // Tandai state tidak valid
     disableButton();
 }
 
+// Callback untuk ReCAPTCHA error
 function onRecaptchaError() {
+    console.error("ReCAPTCHA error");
+    isRecaptchaValid = false; // Tandai state tidak valid
     disableButton();
 }
+
+// Awalnya, tombol di-disable
+disableButton();
+
 
 /*==================== HISTATS ANALITIC ====================*/
 // <!-- Histats.com   (aync)-->
