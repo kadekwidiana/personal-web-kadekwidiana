@@ -43,39 +43,20 @@ window.onscroll = () => {
 };
 
 
-/*==================== SCROLL REVEAL ====================*/
-function initializeScrollReveal() {
-    // Deteksi layar HP (max-width: 768px)
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+/*==================== SCROLL REVERAL ====================*/
+ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200,
+});
 
-    // Default konfigurasi ScrollReveal
-    ScrollReveal({
-        distance: '80px',
-        duration: 2000,
-        delay: 200,
-    });
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-    // Konfigurasi ScrollReveal berdasarkan ukuran layar
-    if (isMobile) {
-        // Untuk layar HP, ubah origin 'left' dan 'right' menjadi 'bottom'
-        ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-        ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .qualification__container, .skills__container', { origin: 'bottom' });
-        ScrollReveal().reveal('.home-content h1, .about-img, .contact-info', { origin: 'bottom' });
-        ScrollReveal().reveal('.home-content p, .about-content, .contact form', { origin: 'bottom' });
-    } else {
-        // Untuk layar lebih besar, gunakan konfigurasi default
-        ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-        ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .qualification__container, .skills__container', { origin: 'bottom' });
-        ScrollReveal().reveal('.home-content h1, .about-img, .contact-info', { origin: 'left' });
-        ScrollReveal().reveal('.home-content p, .about-content, .contact form', { origin: 'right' });
-    }
-}
-
-// Jalankan fungsi saat halaman dimuat
-initializeScrollReveal();
-
-// Tambahkan event listener untuk mengubah konfigurasi jika ukuran layar berubah
-window.addEventListener('resize', initializeScrollReveal);
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .qualification__container, .skills__container', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img, .contact-info', { origin: isMobile ? 'bottom' : 'left' });
+ScrollReveal().reveal('.home-content p, .about-content, .contact form', { origin: isMobile ? 'bottom' : 'right' });
 
 
 /*==================== TYPED JS ====================*/
