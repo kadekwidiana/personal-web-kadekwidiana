@@ -61,7 +61,13 @@ ScrollReveal().reveal('.home-content p, .about-content, .contact form', { origin
 
 /*==================== TYPED JS ====================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Student', 'Programmer'],
+    strings: [
+        'Software Developer',
+        'Frontend Developer',
+        'Backend Developer',
+        'Fullstack Developer',
+        'Mobile Developer',
+    ],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 100,
